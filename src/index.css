@@ -5,7 +5,11 @@
 }
 
 :root {
-
+    --var-bg: #f7f2f2;
+    --var-bg-header-footer: #6152bf;
+    --var-color-text: #797594;
+    --var-color-titles: #302e3b;
+    --var-color-header-footer: #6fc3c9
 }
 
 .width {
@@ -14,6 +18,11 @@
 
 a {
     text-decoration: none;
+    color: var(--var-color-text);
+}
+
+a:hover{
+    color: var(--var-color-header-footer);
 }
 
 .flex {

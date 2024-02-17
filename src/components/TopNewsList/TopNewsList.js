@@ -1,12 +1,11 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import { v4 } from 'uuid';
 
 import classes from "./TopNewsList.module.css";
 import {getTopUa} from "../../store/slices/topNewsUa.slice";
 import {getTopUs} from "../../store/slices/topNewsUs.slice";
 import {getTopPl} from "../../store/slices/topNewsPl.slice";
-import {SingleTopNews} from "../SingleTopNews/SingleTopNews";
+import {TopNewsHelper} from "../../helpers";
 
 
 const TopNewsList = () => {
@@ -22,28 +21,21 @@ const TopNewsList = () => {
     }, []);
 
 
-
     return (
         <main className={`${classes.wrap} width flex-direction`}>
-            <h1>Top News</h1>
+            <h1>Top country news</h1>
 
             <section className={`${classes.blockNews}  width`}>
                 <article className={`${classes.blockUa}`}>
-                    {topNewsUa && topNewsUa.map(obj => (
-                        <SingleTopNews obj={obj} key={v4()}/>
-                    ))}
+                    <TopNewsHelper country={'Ukraine'} data={topNewsUa}/>
                 </article>
 
                 <article className={`${classes.blockUs}`}>
-                    {topNewsUs && topNewsUs.map(obj => (
-                        <SingleTopNews obj={obj} key={v4()}/>
-                    ))}
+                    <TopNewsHelper country={'USA'} data={topNewsUs}/>
                 </article>
 
                 <article className={`${classes.blockPl}`}>
-                    {topNewsPl && topNewsPl.map(obj => (
-                        <SingleTopNews obj={obj} key={v4()}/>
-                    ))}
+                    <TopNewsHelper country={'Polish'} data={topNewsPl}/>
                 </article>
             </section>
         </main>

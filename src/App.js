@@ -1,7 +1,7 @@
 import {Route, Routes} from "react-router-dom";
 
 import {Layout} from "./Layout";
-import {TopNewsList} from "./components";
+import {EverythingNews, TopNewsList} from "./components";
 
 
 function App() {
@@ -11,6 +11,7 @@ function App() {
             <Routes>
                 <Route path={'/'} element={<Layout/>}>
                     <Route index element={<TopNewsList/>}/>
+                    <Route path={':current'} element={<EverythingNews/>}/>
                 </Route>
             </Routes>
         </div>

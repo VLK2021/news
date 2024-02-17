@@ -17,11 +17,14 @@ const newsService = {
         .get(`${urls.topHeadlines}?country=pl&apiKey=${apiKey}`)
         .then(value => value.data),
 
+    getEverything: (current) => axiosService
+        .get(`${urls.everything}?q=${current}&from=2024-01-17&sortBy=publishedAt&apiKey=${apiKey}`)
+        .then(value => value.data),
+
 }
+
 
 export {
     newsService
 }
 
-//https://newsapi.org/v2/top-headlines?country=ua&apiKey=b4d0ac35ee9444868db03f8f369feec1
-//https://newsapi.org/v2/top-headlines?country=us&apiKey=b4d0ac35ee9444868db03f8f369feec1

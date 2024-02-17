@@ -1,0 +1,12 @@
+.wrap {
+
+}
+
+.wrap P {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--var-color-header-footer);
+    text-decoration: underline;
+    margin-bottom: 0.7rem;
+}

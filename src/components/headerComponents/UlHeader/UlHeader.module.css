@@ -1,0 +1,23 @@
+.ul {
+    list-style: none;
+    color: var(--var-color-text);
+    gap: 1rem;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+li {
+    color: var(--var-color-header-footer);
+}
+
+.li:hover {
+    color: var(--var-color-text);
+    text-decoration: underline;
+}
+
+.active {
+    text-decoration: underline;
+    color: red;
+}

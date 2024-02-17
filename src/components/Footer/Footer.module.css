@@ -1,6 +1,6 @@
 .wrap {
     height: 3rem;
-    color: snow;
-    background: midnightblue;
+    color: var(--var-color-header-footer);
+    background: var(--var-bg-header-footer);
     padding: 0.5rem;
 }

@@ -1,5 +1,14 @@
 .wrap {
+    margin-top: 1rem;
+    color: var(--var-color-text);
+}
 
+.wrap h1 {
+    color: var(--var-color-titles);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2rem;
 }
 
 .blockNews {
@@ -9,19 +18,10 @@
     align-items: start;
     gap: 1rem;
     padding: 0 0.5rem;
+    margin-top: 1rem;
 }
 
-.blockUa {
+.blockUa, .blockUs, .blockPl {
     width: 30%;
-    background: midnightblue;
 }
 
-.blockUs {
-    width: 30%;
-    background: red;
-}
-
-.blockPl {
-    width: 30%;
-    background: green;
-}
