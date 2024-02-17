@@ -1,0 +1,27 @@
+.wrap {
+
+}
+
+.blockNews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+    gap: 1rem;
+    padding: 0 0.5rem;
+}
+
+.blockUa {
+    width: 30%;
+    background: midnightblue;
+}
+
+.blockUs {
+    width: 30%;
+    background: red;
+}
+
+.blockPl {
+    width: 30%;
+    background: green;
+}

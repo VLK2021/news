@@ -3,11 +3,11 @@ import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import {newsService} from "../../services/news.service";
 
 
-export const getTopUa = createAsyncThunk(
-    'topNewsUaSlice/getTopUa',
+export const getTopUs = createAsyncThunk(
+    'topNewsUsSlice/getTopUs',
     async (_, {rejectWithValue}) => {
         try {
-            return await newsService.getTopUA();
+            return  await newsService.getTopUS();
         } catch (e) {
             return rejectWithValue(e.message);
         }
@@ -16,33 +16,33 @@ export const getTopUa = createAsyncThunk(
 
 
 const initialState = {
-    topNewsUa: [],
+    topNewsUs: [],
     status: null,
     error: '',
 }
 
-const topNewsUaSlice = createSlice({
-    name: 'topNewsUaSlice',
+const topNewsUsSlice = createSlice({
+    name: 'topNewsUsSlice',
     initialState,
 
     reducers: {},
 
     extraReducers: (builder) => {
         builder
-            .addCase(getTopUa.pending, (state) => {
+            .addCase(getTopUs.pending, (state) => {
                 state.status = 'loading';
             })
 
-            .addCase(getTopUa.fulfilled, (state, action) => {
+            .addCase(getTopUs.fulfilled, (state, action) => {
                 state.status = 'fulfilled';
-                state.topNewsUa = action.payload.articles;
+                state.topNewsUs = action.payload.articles;
             })
 
-            .addCase(getTopUa.rejected, (state, action) => {
+            .addCase(getTopUs.rejected, (state, action) => {
                 state.status = 'rejected';
                 state.error = action.payload || 'Request failed';
             });
     },
 });
 
-export default topNewsUaSlice.reducer;
+export default topNewsUsSlice.reducer;
