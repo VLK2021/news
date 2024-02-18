@@ -5,9 +5,21 @@ import {newsService} from "../../services/news.service";
 
 export const getEverythingNews = createAsyncThunk(
     'everythingNewsSlice/getEverythingNews',
-    async ({current}, {rejectWithValue}) => {
+    async ({current, page}, {rejectWithValue}) => {
         try {
-           return await newsService.getEverything(current);
+           return await newsService.getEverything(current, page);
+        } catch (e) {
+            return rejectWithValue(e.message);
+        }
+    }
+);
+
+export const getNewsMore = createAsyncThunk(
+    'everythingNewsSlice/getNewsMore',
+    async ({current, page}, {rejectWithValue, dispatch}) => {
+        try {
+            const response = await newsService.getEverything(current, page);
+            dispatch(addNews({response}));
         } catch (e) {
             return rejectWithValue(e.message);
         }
@@ -17,6 +29,7 @@ export const getEverythingNews = createAsyncThunk(
 
 const initialState = {
     everythingNews: [],
+    page: 1,
     status: null,
     error: '',
 }
@@ -25,7 +38,15 @@ const everythingNewsSlice = createSlice({
     name: 'everythingNewsSlice',
     initialState,
 
-    reducers: {},
+    reducers: {
+        changePage: (state, action) => {
+            state.page = action.payload
+        },
+
+        addNews: (state, action) => {
+            action.payload.response.articles.map((n) => state.everythingNews.push(n));
+        }
+    },
 
     extraReducers: (builder) => {
         builder
@@ -45,4 +66,8 @@ const everythingNewsSlice = createSlice({
     },
 });
 
+const {actions: {changePage, addNews}} = everythingNewsSlice;
+const everythingNewsActions = {changePage, addNews};
+
+export {everythingNewsActions};
 export default everythingNewsSlice.reducer;

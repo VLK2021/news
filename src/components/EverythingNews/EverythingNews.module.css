@@ -1,3 +1,47 @@
 .wrap {
+    display: flex;
+    min-height: 80vh;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+    gap: 1rem;
+    padding: 0 0.5rem;
+    margin-top: 1rem;
+}
+
+.blockNews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+    gap: 1rem;
+    padding: 0 0.5rem;
+    margin-top: 1rem;
+}
+
+.blockBtn {
+    margin: 1rem 0;
+}
+
+.blockBtn > button {
+    width: 70%;
+    padding: 0.4rem;
+    border-radius: 1rem;
+    border: 1px solid var(--var-color-header-footer);
+    color: var(--var-color-header-footer);
+    background: var(--var-bg-header-footer);
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.blockBtn > button:hover {
+    border: 3px solid var(--var-color-header-footer);
+    background: var(--var-color-text);
+    color: var(--var-color-header-footer);
+}
+
+.searchBlock {
 
 }

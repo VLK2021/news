@@ -17,8 +17,8 @@ const newsService = {
         .get(`${urls.topHeadlines}?country=pl&apiKey=${apiKey}`)
         .then(value => value.data),
 
-    getEverything: (current) => axiosService
-        .get(`${urls.everything}?q=${current}&from=2024-01-17&sortBy=publishedAt&apiKey=${apiKey}`)
+    getEverything: (current, page) => axiosService
+        .get(`${urls.everything}?q=${current}&apiKey=${apiKey}&pageSize=10&page=${page}`)
         .then(value => value.data),
 
 }
@@ -27,4 +27,5 @@ const newsService = {
 export {
     newsService
 }
+
 

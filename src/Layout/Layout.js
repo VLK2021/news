@@ -1,8 +1,9 @@
 import React from 'react';
 import {Outlet} from 'react-router-dom';
+import { Suspense } from 'react';
 
 import classes from "./Layout.module.css";
-import {Footer, Header} from "../components";
+import {Footer, Header, Spinner} from "../components";
 
 
 const Layout = () => {
@@ -16,7 +17,9 @@ const Layout = () => {
             </section>
 
             <section className={`${classes.blockOutlet} width`}>
-                <Outlet/>
+                <Suspense fallback={<Spinner/>}>
+                    <Outlet/>
+                </Suspense>
             </section>
 
             <section className={`${classes.blockFooter} width`}>

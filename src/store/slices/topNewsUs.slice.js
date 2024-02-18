@@ -17,6 +17,7 @@ export const getTopUs = createAsyncThunk(
 
 const initialState = {
     topNewsUs: [],
+    userNewsUs: [],
     status: null,
     error: '',
 }
