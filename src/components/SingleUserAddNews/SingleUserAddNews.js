@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {IoMdClose} from "react-icons/io";
+import { FaStar } from "react-icons/fa6";
 import {useDispatch} from "react-redux";
 
 import classes from "./SingleUserAddNews.module.css";
@@ -11,6 +12,7 @@ import {addUserNewsPLActions} from "../../store/slices/topNewsPl.slice";
 const SingleUserAddNews = ({obj, country}) => {
     const {id, title} = obj;
     const dispatch = useDispatch();
+    const [isClassChanged, setIsClassChanged] = useState(false);
 
     const deleteNews = () => {
         if (country === 'Ukraine') {
@@ -24,10 +26,19 @@ const SingleUserAddNews = ({obj, country}) => {
         }
     };
 
+    const currentColor = isClassChanged ? 'yellow' : '#797594';
+
+    const fasten = () => {
+        setIsClassChanged(!isClassChanged);
+        if (!isClassChanged) {
+        }
+    }
+
 
     return (
         <main className={`${classes.wrap} width`}>
             <section className={`${classes.blockIcon} width flex`}>
+                <FaStar onClick={fasten} style={{color: currentColor}}/>
                 <IoMdClose onClick={deleteNews}/>
             </section>
 

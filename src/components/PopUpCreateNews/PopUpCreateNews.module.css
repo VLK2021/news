@@ -1,10 +1,10 @@
 .wrap {
     width: 60%;
-    min-height: 30rem;
+    min-height: 20rem;
     background: red;
     color: #f7f2f2;
     position: absolute;
-    top: 100%;
+    top: 140%;
     left: 18%;
     padding: 0.5rem;
     border-radius: 1rem;

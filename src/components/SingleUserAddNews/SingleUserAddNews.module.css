@@ -3,7 +3,7 @@
 }
 
 .blockIcon {
-    justify-content: end;
+    justify-content: space-between;
     color: var(--var-color-header-footer);
     font-size: 1.3rem;
     cursor: pointer;
@@ -19,4 +19,12 @@
     text-decoration: none;
     text-transform: none;
     font-weight: normal;
+}
+
+.iconStarDefault {
+
+}
+
+.iconStarActive {
+    color: yellow;
 }
