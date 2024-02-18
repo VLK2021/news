@@ -11,7 +11,7 @@ import {apiKey} from "../constants/apiKey";
 const axiosService = axios.create({
     baseURL,
     headers: {
-        'X-Api-Key': apiKey
+        Authorization: 'b4d0ac35ee9444868db03f8f369feec1'
     }
 });
 
