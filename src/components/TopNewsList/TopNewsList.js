@@ -30,19 +30,19 @@ const TopNewsList = () => {
             <section className={`${classes.blockNews}  width`}>
                 <article className={`${classes.blockUa}`}>
                     <TopNewsHelper country={'Ukraine'} data={topNewsUa}/>
-                    {<UserNews country={'Ukraine'}/>}
+                    {userNewsUa.length > 0 && <UserNews country={'Ukraine'} data={userNewsUa}/>}
                     <AddNewsButton country={'Ukraine'}/>
                 </article>
 
                 <article className={`${classes.blockUs}`}>
                     <TopNewsHelper country={'USA'} data={topNewsUs}/>
-                    {<UserNews country={'USA'}/>}
+                    {userNewsUs.length > 0 && <UserNews country={'USA'} data={userNewsUs}/>}
                     <AddNewsButton country={'USA'}/>
                 </article>
 
                 <article className={`${classes.blockPl}`}>
                     <TopNewsHelper country={'Polish'} data={topNewsPl}/>
-                    {<UserNews country={'Polish'}/>}
+                    {userNewsPL.length > 0 && <UserNews country={'Polish'} data={userNewsPL}/>}
                     <AddNewsButton country={'Polish'}/>
                 </article>
             </section>

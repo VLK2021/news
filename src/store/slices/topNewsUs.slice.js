@@ -26,7 +26,15 @@ const topNewsUsSlice = createSlice({
     name: 'topNewsUsSlice',
     initialState,
 
-    reducers: {},
+    reducers: {
+        AddUserNewsUs: (state, action) => {
+            state.userNewsUs = [...state.userNewsUs, action.payload];
+        },
+
+        deleteNewsUs: (state, action) => {
+            state.userNewsUs = state.userNewsUs.filter(item => item.id !== action.payload);
+        }
+    },
 
     extraReducers: (builder) => {
         builder
@@ -46,4 +54,8 @@ const topNewsUsSlice = createSlice({
     },
 });
 
+const {actions: {AddUserNewsUs, deleteNewsUs}} = topNewsUsSlice;
+const addUserNewsUsActions = {AddUserNewsUs, deleteNewsUs};
+
+export {addUserNewsUsActions};
 export default topNewsUsSlice.reducer;

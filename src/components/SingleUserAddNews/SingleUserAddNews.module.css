@@ -1,0 +1,22 @@
+.wrap {
+
+}
+
+.blockIcon {
+    justify-content: end;
+    color: var(--var-color-header-footer);
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.blockInfo {
+
+}
+
+.blockInfo > .title {
+    color: var(--var-color-text);
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: none;
+    font-weight: normal;
+}

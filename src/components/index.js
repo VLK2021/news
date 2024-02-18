@@ -6,3 +6,6 @@ export * from './EverythingNews/EverythingNews';
 export * from './EverythingSingleNews/EverythingSingleNews';
 export * from './UserNews/UserNews';
 export * from './Loader/Loader';
+export * from './PopUpCreateNews/PopUpCreateNews';
+export * from './AddNewsForm/AddNewsForm';
+export * from './SingleUserAddNews/SingleUserAddNews';

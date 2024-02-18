@@ -1,14 +1,22 @@
 import React from 'react';
 
-const UserNews = ({country}) => {
+import classes from "./UserNews.module.css";
+import {SingleUserAddNews} from "../SingleUserAddNews/SingleUserAddNews";
+
+
+const UserNews = ({country, data}) => {
 
 
     return (
-        <main className={`width`}>
-            <p>User News {country}</p>
-            {country}
+        <main className={`${classes.wrap} width`}>
+            <p className={`flex`}>User News {country}</p>
+
+            <section className={`width`}>
+                {data && data.map(obj => <SingleUserAddNews key={obj.id} obj={obj} country={country}/>)}
+            </section>
         </main>
     );
 };
 
 export {UserNews};
+

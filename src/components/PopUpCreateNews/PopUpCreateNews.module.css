@@ -1,0 +1,30 @@
+.wrap {
+    width: 60%;
+    min-height: 30rem;
+    background: red;
+    color: #f7f2f2;
+    position: absolute;
+    top: 100%;
+    left: 18%;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background: var(--var-color-text);
+}
+
+.blockClose {
+    justify-content: end;
+    color: var(--var-color-header-footer);
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.blockTitle {
+    color: var(--var-color-header-footer);
+    font-weight: bold;
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+.blockForm {
+
+}

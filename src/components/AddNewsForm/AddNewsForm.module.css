@@ -1,0 +1,41 @@
+.wrap {
+    padding: 1rem 2rem;
+}
+
+.inputBlock > label, .inputBlock > input {
+    width: 100%;
+}
+
+.inputBlock > label {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.inputBlock > input {
+    padding: 0.2rem 1rem;
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--var-bg-header-footer);
+    border-radius: 1rem;
+   margin-bottom: 1rem;
+}
+
+.btnPopUpAddNews {
+    width: 100%;
+    padding: 0.4rem;
+    border-radius: 1rem;
+    border: 1px solid var(--var-color-header-footer);
+    color: var(--var-color-header-footer);
+    background: var(--var-bg-header-footer);
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin: 2rem 0;
+}
+
+.btnPopUpAddNews:hover {
+    border: 3px solid var(--var-color-header-footer);
+    background: var(--var-color-text);
+    color: var(--var-color-header-footer);
+}
