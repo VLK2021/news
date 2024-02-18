@@ -1,0 +1,23 @@
+.wrap {
+   width: 100%;
+}
+
+.wrap > input {
+    width: 100%;
+    padding: 0.4rem;
+    color: var(--var-bg-header-footer);
+    font-style: italic;
+    font-size: 0.7rem;
+    border-radius: 1rem 0 0 1rem;
+    border: none;
+}
+
+.wrap > button {
+    border-radius: 0 1rem 1rem 0;
+    padding: 0.4rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--var-bg-header-footer);
+    border: none;
+    cursor: pointer;
+}

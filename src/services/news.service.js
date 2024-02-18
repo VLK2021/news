@@ -3,7 +3,6 @@ import {urls} from "../constants/urls";
 import {apiKey} from "../constants/apiKey";
 
 
-
 const newsService = {
     getTopUA: () => axiosService
         .get(`${urls.topHeadlines}?country=ua&apiKey=${apiKey}`)
@@ -18,6 +17,10 @@ const newsService = {
         .then(value => value.data),
 
     getEverything: (current, page) => axiosService
+        .get(`${urls.everything}?q=${current}&apiKey=${apiKey}&pageSize=10&page=${page}`)
+        .then(value => value.data),
+
+    getSearchEverything: (current, page) => axiosService
         .get(`${urls.everything}?q=${current}&apiKey=${apiKey}&pageSize=10&page=${page}`)
         .then(value => value.data),
 

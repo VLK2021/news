@@ -51,7 +51,7 @@ const everythingNewsSlice = createSlice({
     extraReducers: (builder) => {
         builder
             .addCase(getEverythingNews.pending, (state) => {
-                state.status = 'loading';
+                state.status = 'loading..';
             })
 
             .addCase(getEverythingNews.fulfilled, (state, action) => {

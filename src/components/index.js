@@ -9,3 +9,5 @@ export * from './Loader/Loader';
 export * from './PopUpCreateNews/PopUpCreateNews';
 export * from './AddNewsForm/AddNewsForm';
 export * from './SingleUserAddNews/SingleUserAddNews';
+export * from './SearchEverythingNews/SearchEverythingNews';
+export * from './SearchListEverythingNews/SearchListEverythingNews';
