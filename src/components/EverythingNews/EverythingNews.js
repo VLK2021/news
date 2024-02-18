@@ -6,7 +6,6 @@ import {v4} from 'uuid';
 import classes from "./EverythingNews.module.css";
 import {everythingNewsActions, getEverythingNews, getNewsMore} from "../../store/slices/everythingNews.slice";
 import {EverythingSingleNews} from "../EverythingSingleNews/EverythingSingleNews";
-import {SearchEverythingNews} from "../SearchEverythingNews/SearchEverythingNews";
 
 
 const EverythingNews = () => {
@@ -28,10 +27,6 @@ const EverythingNews = () => {
 
     return (
         <main className={`${classes.wrap} width flex-direction`}>
-            {/*<section className={`${classes.searchBlock} width flex`}>*/}
-            {/*    /!*<SearchEverythingNews addMoreHandler={addMoreHandler}/>*!/*/}
-            {/*</section>*/}
-
             <section className={`${classes.blockNews} width`}>
                 {everythingNews && everythingNews.map(obj => <EverythingSingleNews key={v4()} obj={obj}/>)}
             </section>

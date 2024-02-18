@@ -21,11 +21,10 @@ const newsService = {
         .then(value => value.data),
 
     getSearchEverything: (current, page) => axiosService
-        .get(`${urls.everything}?q=${current}&apiKey=${apiKey}&pageSize=10&page=${page}`)
+        .get(`${urls.everything}?q=${current}&apiKey=${apiKey}&pageSize=30&page=${page}`)
         .then(value => value.data),
 
 }
-
 
 export {
     newsService

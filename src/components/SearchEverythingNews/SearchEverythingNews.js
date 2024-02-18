@@ -12,11 +12,12 @@ const SearchEverythingNews = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    const {register, handleSubmit} = useForm();
+    const {register, handleSubmit, reset} = useForm();
 
     const submit = (data) => {
         dispatch(getSearchEverythingNews({current: data.search, page}));
         navigate(`/search/${data.search}`);
+        reset();
     }
 
 
