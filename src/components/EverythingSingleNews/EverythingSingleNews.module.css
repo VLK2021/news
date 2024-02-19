@@ -28,6 +28,25 @@
 
 }
 
-.blockTitle > p{
-padding: 0 0.3rem;
+.blockTitle > p {
+    padding: 0 0.3rem;
+}
+
+
+@media (min-width: 992px) {
+    .wrap {
+        width: 30%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+    .wrap {
+        width: 35%;
+    }
+}
+
+@media (min-width: 200px) and (max-width: 575px) {
+    .wrap {
+        width: 80%;
+    }
 }

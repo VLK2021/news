@@ -4,3 +4,21 @@
     background: var(--var-bg-header-footer);
     padding: 0.5rem;
 }
+
+.btn {
+    width: 8.5rem;
+    padding: 0.3rem;
+    border: 1px solid var(--var-color-header-footer);
+    border-radius: 1rem;
+    color: var(--var-color-header-footer);
+    background: var(--var-bg-header-footer);
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    border: 3px solid var(--var-color-header-footer);
+    background: var(--var-color-text);
+    color: var(--var-color-header-footer);
+}

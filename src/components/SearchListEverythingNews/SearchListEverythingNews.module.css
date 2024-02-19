@@ -34,3 +34,17 @@
     background: var(--var-color-text);
     color: var(--var-color-header-footer);
 }
+
+
+@media (min-width: 576px) and (max-width: 991px) {
+    .blockSearchNews {
+        justify-content: center;
+        gap: 3rem;
+    }
+}
+
+@media (min-width: 200px) and (max-width: 575px) {
+    .blockSearchNews {
+        justify-content: center;
+    }
+}
