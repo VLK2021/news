@@ -4,11 +4,6 @@ import baseURL from "../constants/baseURL";
 import {apiKey} from "../constants/apiKey";
 
 
-// const axiosService = axios.create({
-//     baseURL
-// });
-//withCredentials: true
-
 const axiosService = axios.create({
     baseURL,
     headers: {
