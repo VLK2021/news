@@ -18,6 +18,7 @@ export const getTopPl = createAsyncThunk(
 const initialState = {
     topNewsPl: [],
     userNewsPL: [],
+    isFastenPL: 0,
     status: null,
     error: '',
 }
@@ -33,6 +34,14 @@ const topNewsPlSlice = createSlice({
 
         deleteNewsPL: (state, action) => {
             state.userNewsPL = state.userNewsPL.filter(item => item.id !== action.payload);
+        },
+
+        fastenUserNewsPL: (state, action) => {
+            state.userNewsPL = action.payload;
+        },
+
+        changeIsFastenPL: (state, action) => {
+            state.isFastenPL = action.payload;
         }
     },
 
@@ -54,8 +63,8 @@ const topNewsPlSlice = createSlice({
     },
 });
 
-const {actions: {addUserNewsPL, deleteNewsPL}} = topNewsPlSlice;
-const addUserNewsPLActions = {addUserNewsPL, deleteNewsPL};
+const {actions: {addUserNewsPL, deleteNewsPL, fastenUserNewsPL, changeIsFastenPL}} = topNewsPlSlice;
+const addUserNewsPLActions = {addUserNewsPL, deleteNewsPL, fastenUserNewsPL, changeIsFastenPL};
 
 export {addUserNewsPLActions};
 export default topNewsPlSlice.reducer;

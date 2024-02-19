@@ -14,10 +14,10 @@ export const getTopUa = createAsyncThunk(
     }
 );
 
-
 const initialState = {
     topNewsUa: [],
     userNewsUa: [],
+    isFastenUa: 0,
     status: null,
     error: '',
 }
@@ -31,15 +31,23 @@ const topNewsUaSlice = createSlice({
             state.userNewsUa = [...state.userNewsUa, action.payload];
         },
 
+        fastenUserNews: (state, action) => {
+            state.userNewsUa = action.payload;
+        },
+
         deleteNewsUa: (state, action) => {
             state.userNewsUa = state.userNewsUa.filter(item => item.id !== action.payload);
+        },
+
+        changeIsFastenUa: (state, action) => {
+            state.isFastenUa = action.payload;
         }
     },
 
     extraReducers: (builder) => {
         builder
             .addCase(getTopUa.pending, (state) => {
-                state.status = 'loading';
+                state.status = 'loading.';
             })
 
             .addCase(getTopUa.fulfilled, (state, action) => {
@@ -54,8 +62,8 @@ const topNewsUaSlice = createSlice({
     },
 });
 
-const {actions: {addUserNews, deleteNewsUa}} = topNewsUaSlice;
-const addUserNewsAction = {addUserNews, deleteNewsUa};
+const {actions: {addUserNews, deleteNewsUa, fastenUserNews, changeIsFastenUa}} = topNewsUaSlice;
+const addUserNewsAction = {addUserNews, deleteNewsUa, fastenUserNews, changeIsFastenUa};
 export {addUserNewsAction};
 
 export default topNewsUaSlice.reducer;
